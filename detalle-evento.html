@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalle del Evento - EventManager</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-brand">
+                <h1>EventManager</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="dashboard.html">Mis Eventos</a></li>
+                <li><a href="nuevo-evento.html">Nuevo Evento</a></li>
+                <li><a href="buscar-eventos.html">Buscar</a></li>
+                <li><a href="perfil.html">Perfil</a></li>
+                <li><a href="index.html">Cerrar Sesión</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <div class="event-detail-container">
+            <div class="event-detail-header">
+                <div class="breadcrumb">
+                    <a href="dashboard.html">Mis Eventos</a> / <span>Detalle del evento</span>
+                </div>
+                <div class="event-actions">
+                    <a href="editar-evento.html" class="btn btn-warning">✏️ Editar</a>
+                    <a href="dashboard.html" class="btn btn-danger">🗑️ Eliminar</a>
+                    <a href="dashboard.html" class="btn btn-info">📤 Compartir</a>
+                </div>
+            </div>
+
+            <div class="event-detail-card">
+                <div class="event-header">
+                    <h1>Reunión de proyecto</h1>
+                    <span class="event-category trabajo">Trabajo</span>
+                </div>
+
+                <div class="event-info">
+                    <div class="info-section">
+                        <h3>📅 Fecha y hora</h3>
+                        <p><strong>Fecha:</strong> 15 de octubre, 2025</p>
+                        <p><strong>Hora:</strong> 10:00 AM</p>
+                        <p><strong>Duración:</strong> 2 horas</p>
+                    </div>
+
+                    <div class="info-section">
+                        <h3>📍 Ubicación</h3>
+                        <p>Sala de conferencias A</p>
+                    </div>
+
+                    <div class="info-section">
+                        <h3>📝 Descripción</h3>
+                        <p>Revisión del progreso del proyecto y planificación de próximas tareas. Se discutirán los entregables de la próxima semana y se asignarán responsabilidades.</p>
+                    </div>
+
+                    <div class="info-section">
+                        <h3>⚡ Prioridad</h3>
+                        <span class="priority-badge alta">Alta</span>
+                    </div>
+
+                    <div class="info-section">
+                        <h3>🔔 Recordatorio</h3>
+                        <p>✅ Activado - 30 minutos antes</p>
+                    </div>
+                </div>
+
+                <div class="event-meta">
+                    <div class="meta-item">
+                        <span class="meta-label">Creado:</span>
+                        <span class="meta-value">1 de octubre, 2025</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Última modificación:</span>
+                        <span class="meta-value">5 de octubre, 2025</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Eventos relacionados o sugeridos -->
+            <div class="related-events">
+                <h3>Eventos relacionados</h3>
+                <div class="related-events-list">
+                    <div class="related-event-item">
+                        <h4>Entrega de proyecto</h4>
+                        <p>20 de octubre, 2025 - 5:00 PM</p>
+                        <span class="event-category trabajo">Trabajo</span>
+                    </div>
+                    <div class="related-event-item">
+                        <h4>Reunión de seguimiento</h4>
+                        <p>25 de octubre, 2025 - 10:00 AM</p>
+                        <span class="event-category trabajo">Trabajo</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2025 EventManager - Gestión de Eventos ADI</p>
+    </footer>
+
+</body>
+</html>

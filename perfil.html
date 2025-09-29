@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil de Usuario - EventManager</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-brand">
+                <h1>EventManager</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="dashboard.html">Mis Eventos</a></li>
+                <li><a href="nuevo-evento.html">Nuevo Evento</a></li>
+                <li><a href="buscar-eventos.html">Buscar</a></li>
+                <li><a href="perfil.html" class="active">Perfil</a></li>
+                <li><a href="index.html">Cerrar Sesión</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <div class="profile-container">
+            <h2>Mi Perfil</h2>
+            
+            <div class="profile-sections">
+                <!-- Información Personal -->
+                <div class="profile-section">
+                    <h3>Información Personal</h3>
+                    <form class="profile-form" action="perfil.html" method="get">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="userName">Nombre completo</label>
+                                <input type="text" id="userName" name="name" value="Juan Pérez García">
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="userEmail">Email</label>
+                                <input type="email" id="userEmail" name="email" value="juan.perez@email.com">
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="userPhone">Teléfono</label>
+                                <input type="tel" id="userPhone" name="phone" value="+34 123 456 789">
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="userBio">Biografía</label>
+                                <textarea id="userBio" name="bio" rows="3">Desarrollador de software especializado en aplicaciones web. Me gusta mantener mis eventos organizados y ser productivo.</textarea>
+                            </div>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary">Guardar Cambios</button>
+                    </form>
+                </div>
+
+                <!-- Configuración de Notificaciones -->
+                <div class="profile-section">
+                    <h3>Configuración de Notificaciones</h3>
+                    <div class="notification-settings">
+                        <div class="setting-item">
+                            <label class="checkbox-label">
+                                <input type="checkbox" checked>
+                                <span class="checkmark"></span>
+                                Recordatorios por email
+                            </label>
+                        </div>
+                        
+                        <div class="setting-item">
+                            <label class="checkbox-label">
+                                <input type="checkbox" checked>
+                                <span class="checkmark"></span>
+                                Notificaciones en navegador
+                            </label>
+                        </div>
+                        
+                        <div class="setting-item">
+                            <label class="checkbox-label">
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                                Resumen semanal
+                            </label>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="reminderTime">Tiempo de recordatorio por defecto</label>
+                            <select id="reminderTime" name="defaultReminder">
+                                <option value="5">5 minutos antes</option>
+                                <option value="15">15 minutos antes</option>
+                                <option value="30" selected>30 minutos antes</option>
+                                <option value="60">1 hora antes</option>
+                                <option value="1440">1 día antes</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Estadísticas -->
+                <div class="profile-section">
+                    <h3>Estadísticas</h3>
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <h4>Total de eventos</h4>
+                            <span class="stat-number">47</span>
+                        </div>
+                        <div class="stat-card">
+                            <h4>Este mes</h4>
+                            <span class="stat-number">8</span>
+                        </div>
+                        <div class="stat-card">
+                            <h4>Completados</h4>
+                            <span class="stat-number">42</span>
+                        </div>
+                        <div class="stat-card">
+                            <h4>Próximos</h4>
+                            <span class="stat-number">5</span>
+                        </div>
+                    </div>
+                    
+                    <div class="category-stats">
+                        <h4>Eventos por categoría</h4>
+                        <div class="category-bar">
+                            <div class="category-item">
+                                <span>Trabajo</span>
+                                <div class="progress-bar">
+                                    <div class="progress trabajo" style="width: 60%"></div>
+                                </div>
+                                <span>28</span>
+                            </div>
+                            <div class="category-item">
+                                <span>Personal</span>
+                                <div class="progress-bar">
+                                    <div class="progress personal" style="width: 25%"></div>
+                                </div>
+                                <span>12</span>
+                            </div>
+                            <div class="category-item">
+                                <span>Ocio</span>
+                                <div class="progress-bar">
+                                    <div class="progress ocio" style="width: 15%"></div>
+                                </div>
+                                <span>7</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cambiar Contraseña -->
+                <div class="profile-section">
+                    <h3>Cambiar Contraseña</h3>
+                    <form class="password-form" action="perfil.html" method="get">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="currentPassword">Contraseña actual</label>
+                                <input type="password" id="currentPassword" name="currentPassword">
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="newPassword">Nueva contraseña</label>
+                                <input type="password" id="newPassword" name="newPassword">
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="confirmNewPassword">Confirmar nueva contraseña</label>
+                                <input type="password" id="confirmNewPassword" name="confirmNewPassword">
+                            </div>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-warning">Cambiar Contraseña</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2025 EventManager - Gestión de Eventos ADI</p>
+    </footer>
+
+</body>
+</html>

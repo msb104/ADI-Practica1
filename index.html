@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Eventos - Inicio</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-brand">
+                <h1>EventManager</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Inicio</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <div class="auth-container">
+            <!-- Radio buttons ocultos para controlar los tabs -->
+            <input type="radio" id="loginTab" name="auth-tab" checked>
+            <input type="radio" id="registerTab" name="auth-tab">
+            
+            <!-- Labels que actúan como botones de tabs -->
+            <div class="auth-tabs">
+                <label for="loginTab" class="tab-button">Iniciar Sesión</label>
+                <label for="registerTab" class="tab-button">Registrarse</label>
+            </div>
+
+            <!-- Formulario de Login -->
+            <div class="auth-form login-form">
+                <h2>Iniciar Sesión</h2>
+                <form action="dashboard.html">
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email">
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Contraseña:</label>
+                        <input type="password" id="password" name="password">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Entrar</button>
+                </form>
+            </div>
+
+            <!-- Formulario de Registro -->
+            <div class="auth-form register-form">
+                <h2>Registrarse</h2>
+                <form action="dashboard.html">
+                    <div class="form-group">
+                        <label for="regName">Nombre completo:</label>
+                        <input type="text" id="regName" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="regEmail">Email:</label>
+                        <input type="email" id="regEmail" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="regPassword">Contraseña:</label>
+                        <input type="password" id="regPassword" name="password" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="confirmPassword">Confirmar contraseña:</label>
+                        <input type="password" id="confirmPassword" name="confirmPassword" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Crear cuenta</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2025 EventManager - Gestión de Eventos ADI</p>
+    </footer>
+
+</body>
+</html>

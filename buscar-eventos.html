@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscar Eventos - EventManager</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-brand">
+                <h1>EventManager</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="dashboard.html">Mis Eventos</a></li>
+                <li><a href="nuevo-evento.html">Nuevo Evento</a></li>
+                <li><a href="buscar-eventos.html" class="active">Buscar</a></li>
+                <li><a href="perfil.html">Perfil</a></li>
+                <li><a href="index.html">Cerrar Sesión</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <div class="search-container">
+            <h2>Buscar Eventos</h2>
+            
+            <div class="search-form-section">
+                <form class="advanced-search" action="buscar-eventos.html" method="get">
+                    <div class="search-row">
+                        <div class="form-group">
+                            <label for="searchText">Buscar por título o descripción</label>
+                            <input type="text" id="searchText" name="searchText" placeholder="Buscar eventos...">
+                        </div>
+                        <button type="submit" class="btn btn-primary">🔍 Buscar</button>
+                    </div>
+                    
+                    <div class="filters-section">
+                        <h3>Filtros avanzados</h3>
+                        
+                        <div class="filter-row">
+                            <div class="form-group">
+                                <label for="filterCategory">Categoría</label>
+                                <select id="filterCategory" name="category">
+                                    <option value="">Todas las categorías</option>
+                                    <option value="trabajo">Trabajo</option>
+                                    <option value="personal">Personal</option>
+                                    <option value="ocio">Ocio</option>
+                                    <option value="salud">Salud</option>
+                                    <option value="educacion">Educación</option>
+                                    <option value="familia">Familia</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="filterPriority">Prioridad</label>
+                                <select id="filterPriority" name="priority">
+                                    <option value="">Todas las prioridades</option>
+                                    <option value="baja">Baja</option>
+                                    <option value="media">Media</option>
+                                    <option value="alta">Alta</option>
+                                    <option value="urgente">Urgente</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="filter-row">
+                            <div class="form-group">
+                                <label for="dateFrom">Desde</label>
+                                <input type="date" id="dateFrom" name="dateFrom">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="dateTo">Hasta</label>
+                                <input type="date" id="dateTo" name="dateTo">
+                            </div>
+                        </div>
+                        
+                        <div class="filter-row">
+                            <div class="checkbox-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="withReminder">
+                                    <span class="checkmark"></span>
+                                    Solo eventos con recordatorio
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <div class="filter-actions">
+                            <a href="buscar-eventos.html" class="btn btn-secondary">Limpiar filtros</a>
+                            <button type="submit" class="btn btn-primary">Aplicar filtros</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            
+            <!-- Resultados de búsqueda -->
+            <div class="search-results">
+                <div class="results-header">
+                    <h3>Resultados de búsqueda</h3>
+                    <span class="results-count">3 eventos encontrados</span>
+                </div>
+                
+                <div class="results-grid">
+                    <!-- Resultado 1 -->
+                    <div class="event-card search-result">
+                        <div class="event-header">
+                            <h3>Reunión de proyecto</h3>
+                            <span class="event-category trabajo">Trabajo</span>
+                        </div>
+                        <div class="event-details">
+                            <p class="event-date">📅 15 de octubre, 2025 - 10:00 AM</p>
+                            <p class="event-location">📍 Sala de conferencias A</p>
+                            <p class="event-description">Revisión del progreso del proyecto y planificación de próximas tareas.</p>
+                            <div class="event-tags">
+                                <span class="priority-badge alta">Alta prioridad</span>
+                                <span class="reminder-badge">🔔 Con recordatorio</span>
+                            </div>
+                        </div>
+                        <div class="event-actions">
+                            <a href="detalle-evento.html" class="btn btn-info">Ver detalle</a>
+                            <a href="editar-evento.html" class="btn btn-warning">Editar</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Resultado 2 -->
+                    <div class="event-card search-result">
+                        <div class="event-header">
+                            <h3>Cita médica</h3>
+                            <span class="event-category personal">Personal</span>
+                        </div>
+                        <div class="event-details">
+                            <p class="event-date">📅 18 de octubre, 2025 - 4:30 PM</p>
+                            <p class="event-location">📍 Centro médico San Juan</p>
+                            <p class="event-description">Revisión anual con el médico de cabecera.</p>
+                            <div class="event-tags">
+                                <span class="priority-badge media">Prioridad media</span>
+                                <span class="reminder-badge">🔔 Con recordatorio</span>
+                            </div>
+                        </div>
+                        <div class="event-actions">
+                            <a href="detalle-evento.html" class="btn btn-info">Ver detalle</a>
+                            <a href="editar-evento.html" class="btn btn-warning">Editar</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Resultado 3 -->
+                    <div class="event-card search-result">
+                        <div class="event-header">
+                            <h3>Concierto de jazz</h3>
+                            <span class="event-category ocio">Ocio</span>
+                        </div>
+                        <div class="event-details">
+                            <p class="event-date">📅 22 de octubre, 2025 - 8:00 PM</p>
+                            <p class="event-location">📍 Teatro Principal</p>
+                            <p class="event-description">Noche de jazz con la banda local "Blue Notes".</p>
+                            <div class="event-tags">
+                                <span class="priority-badge baja">Prioridad baja</span>
+                                <span class="no-reminder-badge">Sin recordatorio</span>
+                            </div>
+                        </div>
+                        <div class="event-actions">
+                            <a href="detalle-evento.html" class="btn btn-info">Ver detalle</a>
+                            <a href="editar-evento.html" class="btn btn-warning">Editar</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Paginación -->
+                <div class="pagination">
+                    <button class="btn btn-secondary" disabled>« Anterior</button>
+                    <span class="page-info">Página 1 de 1</span>
+                    <button class="btn btn-secondary" disabled>Siguiente »</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2025 EventManager - Gestión de Eventos ADI</p>
+    </footer>
+
+</body>
+</html>
