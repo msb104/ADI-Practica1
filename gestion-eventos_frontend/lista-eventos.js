@@ -1,3 +1,4 @@
+import { logout } from './backend/services/authService.js';
 import { listarEventos } from './backend/services/listarEventos.js';
 import { borrarEvento } from './backend/services/borrarEvento.js';
 
@@ -48,4 +49,14 @@ document.addEventListener('DOMContentLoaded', async () => {
         emptyState.style.display = 'block';
         emptyStateMessage.textContent = 'Error al cargar los eventos: ' + error.message;
     }
+});
+
+document.getElementById('logoutLink').addEventListener('click', async (event) => {
+	event.preventDefault();
+	try {
+		await logout();
+		window.location.href = '/login.html';
+	} catch (error) {
+		console.error('Error during logout:', error);
+	}
 });

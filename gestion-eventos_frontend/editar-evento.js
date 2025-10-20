@@ -1,3 +1,4 @@
+import { logout } from './backend/services/authService.js';
 import { editarEvento } from './backend/services/editarEvento.js';
 import { verEvento } from './backend/services/verEvento.js';
 
@@ -60,4 +61,14 @@ document.addEventListener('DOMContentLoaded', async () => {
             alert('Error al actualizar el evento: ' + error.message);
         }
     });
+});
+
+document.getElementById('logoutLink').addEventListener('click', async (event) => {
+	event.preventDefault();
+	try {
+		await logout();
+		window.location.href = '/login.html';
+	} catch (error) {
+		console.error('Error during logout:', error);
+	}
 });
