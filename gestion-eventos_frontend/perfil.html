@@ -19,7 +19,7 @@
                 <li><a href="nuevo-evento.html">Nuevo Evento</a></li>
                 <li><a href="buscar-eventos.html">Buscar</a></li>
                 <li><a href="perfil.html" class="active">Perfil</a></li>
-                <li><a href="#" id="logoutLink">Cerrar Sesión</a></li>
+                <li><button type="button" class="btn" id="logoutButton"> Cerrar Sesión</button></li>
             </ul>
         </nav>
     </header>
@@ -46,22 +46,8 @@
                                 <input type="email" id="userEmail" name="email" placeholder="tu@email.com">
                             </div>
                         </div>
-                        
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="userPhone">Teléfono</label>
-                                <input type="tel" id="userPhone" name="phone">
-                            </div>
-                        </div>
-                        
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="userBio">Biografía</label>
-                                <textarea id="userBio" name="bio" rows="3" placeholder="Cuéntanos algo sobre ti"></textarea>
-                            </div>
-                        </div>
-                        
-                        <button type="submit" class="btn btn-primary">Guardar Cambios</button>
+
+                        <button type="button" id="updateUser" class="btn btn-primary">Guardar Cambios</button>
                     </form>
                 </div>
 
@@ -131,7 +117,7 @@
                             </div>
                         </div>
                         
-                        <button type="submit" class="btn btn-warning">Cambiar Contraseña</button>
+                        <button type="button" id="updatePasswd" class="btn btn-warning">Cambiar Contraseña</button>
                     </form>
                 </div>
 
@@ -149,6 +135,6 @@
         <p>&copy; 2025 EventManager - Gestión de Eventos ADI</p>
     </footer>
 
-    <script type="module" src="main.js"></script>
+    <script type="module" src="perfil.js"></script>
 </body>
 </html>
