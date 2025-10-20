@@ -19,7 +19,7 @@
                 <li><a href="nuevo-evento.html" class="active">Nuevo Evento</a></li>
                 <li><a href="buscar-eventos.html">Buscar</a></li>
                 <li><a href="perfil.html">Perfil</a></li>
-                <li><a href="#" id="logoutLink">Cerrar Sesión</a></li>
+                <li><button type="button" class="btn" id="logoutButton"> Cerrar Sesión</button></li>
             </ul>
         </nav>
     </header>
@@ -117,7 +117,7 @@
 
                 <div class="form-actions">
                     <a href="dashboard.html" class="btn btn-secondary">Cancelar</a>
-                    <button type="submit" class="btn btn-primary">Guardar Evento</button>
+                    <button type="button" id="createEventButton" class="btn btn-primary">Guardar Evento</button>
                 </div>
             </form>
         </div>
@@ -127,6 +127,6 @@
         <p>&copy; 2025 EventManager - Gestión de Eventos ADI</p>
     </footer>
 
-    <script type="module" src="main.js"></script>
+    <script type="module" src="nuevo-evento.js"></script>
 </body>
 </html>
