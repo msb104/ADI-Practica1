@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuevo Evento - EventManager</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-brand">
+                <h1>EventManager</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="dashboard.html">Mis Eventos</a></li>
+                <li><a href="nuevo-evento.html" class="active">Nuevo Evento</a></li>
+                <li><a href="buscar-eventos.html">Buscar</a></li>
+                <li><a href="perfil.html">Perfil</a></li>
+                <li><a href="#" id="logoutLink">Cerrar Sesión</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <div class="form-container">
+            <h2>Crear Nuevo Evento</h2>
+            
+            <form class="event-form" id="newEventForm" novalidate>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="eventTitle">Título del evento *</label>
+                        <input type="text" id="eventTitle" name="title" required placeholder="Ej. Reunión de equipo">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="eventCategory">Categoría *</label>
+                        <select id="eventCategory" name="category" required>
+                            <option value="">Seleccionar categoría</option>
+                            <option value="trabajo">Trabajo</option>
+                            <option value="personal">Personal</option>
+                            <option value="ocio">Ocio</option>
+                            <option value="salud">Salud</option>
+                            <option value="educacion">Educación</option>
+                            <option value="familia">Familia</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="eventDate">Fecha *</label>
+                        <input type="date" id="eventDate" name="date" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="eventTime">Hora *</label>
+                        <input type="time" id="eventTime" name="time" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="eventLocation">Ubicación</label>
+                        <input type="text" id="eventLocation" name="location" placeholder="Ej. Sala de conferencias A">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="eventDuration">Duración estimada</label>
+                        <select id="eventDuration" name="duration">
+                            <option value="">Seleccionar duración</option>
+                            <option value="15">15 minutos</option>
+                            <option value="30">30 minutos</option>
+                            <option value="60">1 hora</option>
+                            <option value="90">1.5 horas</option>
+                            <option value="120">2 horas</option>
+                            <option value="180">3 horas</option>
+                            <option value="240">4 horas</option>
+                            <option value="480">Todo el día</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="eventDescription">Descripción</label>
+                        <textarea id="eventDescription" name="description" rows="4" placeholder="Detalles adicionales del evento..."></textarea>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="eventPriority">Prioridad</label>
+                        <select id="eventPriority" name="priority">
+                            <option value="baja">Baja</option>
+                            <option value="media" selected>Media</option>
+                            <option value="alta">Alta</option>
+                            <option value="urgente">Urgente</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="checkbox-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="eventReminder" name="reminder">
+                            <span class="checkmark"></span>
+                            Enviar recordatorio
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-actions">
+                    <a href="dashboard.html" class="btn btn-secondary">Cancelar</a>
+                    <button type="submit" class="btn btn-primary">Guardar Evento</button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2025 EventManager - Gestión de Eventos ADI</p>
+    </footer>
+
+    <script type="module" src="main.js"></script>
+</body>
+</html>

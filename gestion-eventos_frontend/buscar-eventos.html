@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscar Eventos - EventManager</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-brand">
+                <h1>EventManager</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="dashboard.html">Mis Eventos</a></li>
+                <li><a href="nuevo-evento.html">Nuevo Evento</a></li>
+                <li><a href="buscar-eventos.html" class="active">Buscar</a></li>
+                <li><a href="perfil.html">Perfil</a></li>
+                <li><a href="#" id="logoutLink">Cerrar Sesión</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <div class="search-container">
+            <h2>Buscar Eventos</h2>
+            
+            <div class="search-form-section">
+                <form class="advanced-search" id="searchForm" novalidate>
+                    <div class="search-row">
+                        <div class="form-group">
+                            <label for="searchText">Buscar por título o descripción</label>
+                            <input type="text" id="searchText" name="searchText" placeholder="Buscar eventos...">
+                        </div>
+                        <button type="submit" class="btn btn-primary">🔍 Buscar</button>
+                    </div>
+                    
+                    <div class="filters-section">
+                        <h3>Filtros avanzados</h3>
+                        
+                        <div class="filter-row">
+                            <div class="form-group">
+                                <label for="filterCategory">Categoría</label>
+                                <select id="filterCategory" name="category">
+                                    <option value="">Todas las categorías</option>
+                                    <option value="trabajo">Trabajo</option>
+                                    <option value="personal">Personal</option>
+                                    <option value="ocio">Ocio</option>
+                                    <option value="salud">Salud</option>
+                                    <option value="educacion">Educación</option>
+                                    <option value="familia">Familia</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="filterPriority">Prioridad</label>
+                                <select id="filterPriority" name="priority">
+                                    <option value="">Todas las prioridades</option>
+                                    <option value="baja">Baja</option>
+                                    <option value="media">Media</option>
+                                    <option value="alta">Alta</option>
+                                    <option value="urgente">Urgente</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="filter-row">
+                            <div class="form-group">
+                                <label for="dateFrom">Desde</label>
+                                <input type="date" id="dateFrom" name="dateFrom">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="dateTo">Hasta</label>
+                                <input type="date" id="dateTo" name="dateTo">
+                            </div>
+                        </div>
+                        
+                        <div class="filter-row">
+                            <div class="checkbox-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="withReminder">
+                                    <span class="checkmark"></span>
+                                    Solo eventos con recordatorio
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <div class="filter-actions">
+                            <a href="buscar-eventos.html" class="btn btn-secondary">Limpiar filtros</a>
+                            <button type="submit" class="btn btn-primary">Aplicar filtros</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            
+            <!-- Resultados de búsqueda -->
+            <div class="search-results">
+                <div class="results-header">
+                    <h3>Resultados de búsqueda</h3>
+                    <span class="results-count" id="resultsCount">Sin resultados</span>
+                </div>
+                
+                <div class="results-grid" id="resultsGrid">
+                    <div class="empty-state" id="resultsEmptyState">
+                        <p>Usa el formulario para encontrar eventos.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2025 EventManager - Gestión de Eventos ADI</p>
+    </footer>
+
+    <script type="module" src="main.js"></script>
+</body>
+</html>
