@@ -12,35 +12,79 @@
     <header class="header">
         <nav class="navbar">
             <div class="nav-brand">
-                <h1>EventManager</h1>
+                <a href="dashboard.html">EventManager</a>
             </div>
             <ul class="nav-links">
                 <li><a href="dashboard.html">Mis Eventos</a></li>
-                <li><a href="nuevo-evento.html">Nuevo Evento</a></li>
-                <li><a href="buscar-eventos.html">Buscar</a></li>
-                <li><a href="perfil.html">Perfil</a></li>
-                <li><a href="#" id="logoutLink">Cerrar Sesión</a></li>
+                <li><a href="nuevo-evento.html">Crear Evento</a></li>
+                <li><a href="perfil.html">Mi Perfil</a></li>
             </ul>
         </nav>
     </header>
 
     <main class="main-content">
         <div class="form-container">
-            <div class="breadcrumb">
-                <a href="dashboard.html">Mis Eventos</a> /
-                <span>Editar</span>
-            </div>
-            
-            <h2>Edición de eventos</h2>
-
-            <div class="empty-state">
-                <p>La edición de eventos se implementará en una iteración posterior.</p>
-                <p>Mientras tanto puedes volver al panel principal o crear un nuevo evento.</p>
-                <div class="form-actions">
-                    <a href="dashboard.html" class="btn btn-secondary">Volver al panel</a>
-                    <a href="nuevo-evento.html" class="btn btn-primary">Crear evento</a>
+            <h2>Editar Evento</h2>
+            <form id="editEventForm" class="event-form">
+                <div class="form-group">
+                    <label for="title">Título</label>
+                    <input type="text" id="title" name="title" required>
                 </div>
-            </div>
+                
+                <div class="form-group">
+                    <label for="description">Descripción</label>
+                    <textarea id="description" name="description" required></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label for="location">Ubicación</label>
+                    <input type="text" id="location" name="location" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="date">Fecha</label>
+                    <input type="date" id="date" name="date" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="time">Hora</label>
+                    <input type="time" id="time" name="time" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="duration">Duración (minutos)</label>
+                    <input type="number" id="duration" name="duration" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="category">Categoría</label>
+                    <select id="category" name="category" required>
+                        <option value="trabajo">Trabajo</option>
+                        <option value="familia">Familia</option>
+                        <option value="ocio">Ocio</option>
+                        <option value="otros">Otros</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="priority">Prioridad</label>
+                    <select id="priority" name="priority" required>
+                        <option value="baja">Baja</option>
+                        <option value="media">Media</option>
+                        <option value="alta">Alta</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="reminder">Recordatorio</label>
+                    <input type="checkbox" id="reminder" name="reminder">
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-primary">Guardar Cambios</button>
+                    <a href="dashboard.html" class="btn btn-secondary">Cancelar</a>
+                </div>
+            </form>
         </div>
     </main>
 
@@ -48,6 +92,6 @@
         <p>&copy; 2025 EventManager - Gestión de Eventos ADI</p>
     </footer>
 
-    <script type="module" src="main.js"></script>
+    <script type="module" src="editar-evento.js"></script>
 </body>
 </html>
