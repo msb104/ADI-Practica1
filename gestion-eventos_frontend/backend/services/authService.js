@@ -1,12 +1,22 @@
 import { pb } from '../config/pb.js';
 
+const login = async function (email, password) {
+  const trimmedEmail = email?.trim();
+  const trimmedPassword = password?.trim();
 
-const login = async function(email, password) {
-  return await pb.collection("users").authWithPassword(email, password)
-}
+  if (!trimmedEmail || !trimmedPassword) {
+    throw new Error('Debes indicar email y contraseña.');
+  }
 
-const logout = () => {
-  pb.authStore.clear()
+  return pb.collection('users').authWithPassword(trimmedEmail, trimmedPassword);
 };
 
-export { login, logout };
+const logout = () => {
+  pb.authStore.clear();
+};
+
+const isAuthenticated = () => pb.authStore.isValid;
+
+const getCurrentUser = () => (pb.authStore.isValid ? pb.authStore.model : null);
+
+export { login, logout, isAuthenticated, getCurrentUser };
